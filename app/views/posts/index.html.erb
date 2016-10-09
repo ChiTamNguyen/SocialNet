@@ -1,0 +1,9 @@
+<h1>Chào mừng đến blog</h1>
+
+<% if current_user %>
+  	Signed in as <%= current_user.username %> | <%= link_to "Logout", '/logout' %>
+<% else %>
+  	<%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+<% end %>
+
+<%= yield %>
